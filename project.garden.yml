@@ -1,0 +1,15 @@
+kind: Project
+
+name: deployment
+
+defaultEnvironment: empty
+
+environments:
+  - name: empty
+  - name: local
+
+providers:
+  - name: terraform
+    version: null
+  - name: local-kubernetes
+    environments: ["local"]

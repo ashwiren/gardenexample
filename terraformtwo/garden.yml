@@ -1,0 +1,7 @@
+kind: Module
+description: terraform
+type: terraform
+name: terraform-two
+
+dependencies:
+  - terraform-test

@@ -1,0 +1,4 @@
+kind: Module
+description: terraform
+type: terraform
+name: terraform-test
