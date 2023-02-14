@@ -4,6 +4,39 @@ Step 1:
 
 `garden plugins terraform apply-module --yes -- terraform-test -input=false -auto-approve`
 
+```
+Plugins 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🌍  Running in namespace default.empty
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Running terraform apply for module terraform-test 
+
+ℹ providers                 → Getting status...
+✔ providers                 → Getting status... → Cached
+   ℹ Run with --force-refresh to force a refresh of provider statuses.
+ℹ providers                 → Getting status...
+✔ providers                 → Getting status... → Cached
+   ℹ Run with --force-refresh to force a refresh of provider statuses.
+ℹ graph                     → Resolving 2 modules...
+✔ graph                     → Resolving 2 modules... → Done
+
+random_password.test_password: Refreshing state... [id=none]
+
+Changes to Outputs:
+  + test_password = (sensitive value)
+
+You can apply this plan to save these new output values to the Terraform state, without changing any real infrastructure.
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+test_password = <sensitive>
+```
+
 Step 2:
 
 `garden --yes -l=silly -o=yaml deploy`
